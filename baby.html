@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+</style>
+</head>
+<body>
+  <div class="center">
+    <p>Você me ama?</p>
+    <button id="simButton">Sim</button>
+    <button id="naoButton" disabled>Não</button>
+    <p id="mensagem" style="display: none;">Te amo demais, baby ❤️</p>
+  </div>
+
+  <script>
+    const simButton = document.getElementById("simButton");
+    const naoButton = document.getElementById("naoButton");
+    const mensagem = document.getElementById("mensagem");
+
+    simButton.addEventListener("click", () => {
+      simButton.disabled = true;
+      naoButton.disabled = true;
+      mensagem.style.display = "block";
+    });
+  </script>
+</body>
+</html>
